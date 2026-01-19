@@ -45,3 +45,4 @@ Comprobamos estatus Nginx
 
 Comprobamos estatus PHP
 <img width="665" height="200" alt="image" src="https://github.com/user-attachments/assets/704f90a8-cc21-4e56-a15d-6e7a3c2792f5" />
+
