@@ -1,6 +1,6 @@
 # Introducción
 
-Aquest projecte forma part del mòdul de projecte intermodular d’Administració de Sistemes Informàtics en Xarxa i es treballa íntegrament en equip, on cada membre és responsable de totes les parts, tant tècniques com documentals. L’aplicació està desenvolupada en PHP, utilitza una base de dades MySQL i gestiona imatges tant a nivell de fitxers com potencialment com a blobs dins de la BBDD.
+Este proyecto forma parte del módulo de proyecto intermodular de Administración de Sistemas Informáticos en Red y se trabaja íntegramente en equipo, donde cada miembro es responsable de todas las partes, tanto técnicas como documentales. La aplicación está desarrollada en PHP, utiliza una base de datos MySQL y gestiona imágenes tanto a nivel de archivos como potencialmente como blobs dentro de la BBDD.
 ​
 
-També es pretén reforçar habilitats clau com comunicació, treball en equip, resolució de problemes, gestió del temps i lideratge, que seran avaluades juntament amb la part tècnica. A més de desplegar la web, haureu de planificar, documentar i controlar versions amb eines com GitHub, Proofhub i documents en Markdown.
+También se pretende reforzar habilidades clave como comunicación, trabajo en equipo, resolución de problemas, gestión del tiempo y liderazgo, que serán evaluadas junto con la parte técnica. Además de desplegar la web, tendréis que planificar, documentar y controlar versiones con herramientas como GitHub, Proofhub y documentos en Markdown
