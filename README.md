@@ -33,8 +33,6 @@ Iniciacion
 
 ## Instalación de servicios.
 Instalacion del ngix y php:
-<img width="648" height="125" alt="image" src="https://github.com/user-attachments/assets/bf71bd73-6041-49cf-98fa-9d15c7ac7c36" />
-
 
 <img width="672" height="291" alt="image" src="https://github.com/user-attachments/assets/040acaa9-6da5-45c5-827b-041301fd37f5" />
 
