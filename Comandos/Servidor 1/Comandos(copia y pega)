@@ -1,5 +1,6 @@
 ## Instalación de servicios.
 Instalacion del ngix y php:
+
 ```bash
 sudo netplan try
 ```
