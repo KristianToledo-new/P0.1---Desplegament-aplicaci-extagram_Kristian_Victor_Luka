@@ -74,21 +74,24 @@ post (TEXT)        | photourl (TEXT)
 ## Alta Disponibilidad:
 Si S2 falla, S1 envía todo a S3. Si S4 está ocupado, espera. Si S5 no responde, en fases futuras la BBDD puede servir las fotos como blobs.
 
-Escalabilidad: Puedes añadir más S2/S3 si hay mucha gente viendo posts, más S4 si suben muchas fotos.
+## Escalabilidad:
+Puedes añadir más S2/S3 si hay mucha gente viendo posts, más S4 si suben muchas fotos.
 
-Seguridad: Cada servicio solo hace una cosa. Si hackean el visor de posts, no pueden subir archivos.
+## Seguridad: 
+Cada servicio solo hace una cosa. Si hackean el visor de posts, no pueden subir archivos.
 
-Rendimiento: NGINX es rapidísimo sirviendo fotos/estilos. PHP solo procesa lógica. MySQL solo guarda datos.
+## Rendimiento: 
+NGINX es rapidísimo sirviendo fotos/estilos. PHP solo procesa lógica. MySQL solo guarda datos.
 
-Fases del proyecto paso a paso
-FASE 1 - Versión Básica (1 servidor)
+# Fases del proyecto paso a paso
+## FASE 1 - Versión Básica (1 servidor)
 Todo funciona en una sola máquina:
 
 text
 [ NGINX + PHP + MySQL + uploads/ ]
 Repasas configuración básica de servidor web, PHP-FPM, MySQL. Subir foto → funciona. Ver posts → funciona.
 
-FASE 2 - Dockerización Completa
+## FASE 2 - Dockerización Completa
 Separas todo en 7 contenedores Docker conectados por red puente:
 
 text
@@ -97,7 +100,7 @@ Internet → [S1 NGINX] → [S2 PHP] [S3 PHP]
                     ↘ [S5 Fotos] 
                     ↘ [S6 CSS/SVG]
                     ↘ [S7 MySQL]
-FASE 3 - Pruebas de Resistencia
+## FASE 3 - Pruebas de Resistencia
 
 Crear 10 posts con fotos → OK
 
@@ -114,17 +117,3 @@ Beneficios para el cliente final
 ✅ Mantenible: Problema en fotos ≠ problema en base de datos
 ✅ Económico: Docker usa pocos recursos
 
-Estado actual del proyecto
-Ya tienes:
-
-✅ Código PHP funcional (extagram.php, upload.php)
-
-✅ Esquema MySQL creado
-
-✅ CSS y preview.svg listos
-
-✅ GitHub repository iniciado
-
-⏳ Pendiente: Dockerizar + arquitectura completa S1-S7
-
-El resultado final será una web profesional que podría soportar miles de usuarios diarios, exactamente como las grandes plataformas sociales.
