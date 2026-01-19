@@ -21,4 +21,5 @@
 Creacion y configuracion de instancia del S2
 <img width="730" height="566" alt="image" src="https://github.com/user-attachments/assets/f1f87f87-8009-44be-8abd-3f78ffd717cd" />
 
+Instancia creada
 
