@@ -13,7 +13,7 @@
 - Victor Serrano
 
 ## Índice
-- [Creacion de VPC](#Creacion-de-VPC)
+- [Creacion de VPC(#Creacion-de-VPC)
 - [Instalación de servicios.](#Instalación-de-servicios.)
 - 
 ## Creacion de VPC
@@ -44,5 +44,6 @@ Comprobamos estatus Nginx
 <img width="665" height="200" alt="image" src="https://github.com/user-attachments/assets/c31a935c-641f-4b18-8a79-3d89bba58ca9" />
 
 Comprobamos estatus PHP
+
 <img width="665" height="200" alt="image" src="https://github.com/user-attachments/assets/704f90a8-cc21-4e56-a15d-6e7a3c2792f5" />
 
