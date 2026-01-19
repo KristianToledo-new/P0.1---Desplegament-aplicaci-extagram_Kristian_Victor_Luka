@@ -1,6 +1,6 @@
 Extagram es una aplicación web sencilla inspirada en Instagram que permite a los usuarios escribir mensajes cortos y subir fotos que todos pueden ver en tiempo real. Imagina una red social básica donde cualquiera puede publicar contenido y el resto lo visualiza inmediatamente. Este proyecto consiste en montar toda la infraestructura técnica para que funcione de manera rápida, estable y sin interrupciones, incluso si alguna parte falla.
 
-##Qué hace exactamente la aplicación
+# Qué hace exactamente la aplicación
 Cuando un usuario entra en la web, ve un formulario muy simple:
 
 Un campo de texto donde escribe su mensaje ("¡Hola mundo!" o lo que quiera)
