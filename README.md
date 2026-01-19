@@ -1,2 +1,15 @@
-# P0.1---Desplegament-aplicaci-extagram_Kristian_Victor_Luka
-PROYECTO P0.1 Y P0.2
+# Projecte
+
+# Inicio
+# **AP - P0.1---Despliegue-aplicacin-extagram - Grupo 4** 
+
+***Objetivo***
+
+
+## Miembros del equipo 
+
+- Kristian Toledo
+- Luka ukleba
+- Victor Serrano
+
+## Índice
