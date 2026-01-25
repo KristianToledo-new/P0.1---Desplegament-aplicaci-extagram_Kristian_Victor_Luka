@@ -1,6 +1,6 @@
 ## Índice
 - [Scripts](#Scripts)
-- [Instalación de servicios del servidor 1](#instalacion-de-servicios-del-servidor-1)
+- [Instalación de servicios del servidor 1](#Instalación-de-servicios-del-servidor-1)
 - [Instalación de servicios del servidor 2](#instalacion-de-servicios-del-servidor-2)
 - [Instalación de servicios del servidor 3](#instalacion-de-servicios-del-servidor-3)
 - [Instalación de servicios del servidor 4](#instalacion-de-servicios-del-servidor-4)
