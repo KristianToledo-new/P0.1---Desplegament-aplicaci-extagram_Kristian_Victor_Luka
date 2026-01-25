@@ -1,13 +1,12 @@
 ## Índice
 - [Scripts](#Scripts)
 - [Instalación de servicios del servidor 1](#Instalación-de-servicios-del-servidor-1)
-- [Instalación de servicios del servidor 2](#instalacion-de-servicios-del-servidor-2)
-- [Instalación de servicios del servidor 3](#instalacion-de-servicios-del-servidor-3)
-- [Instalación de servicios del servidor 4](#instalacion-de-servicios-del-servidor-4)
-- [Instalación de servicios del servidor 5](#instalacion-de-servicios-del-servidor-5)
-- [Instalación de servicios del servidor 6](#instalacion-de-servicios-del-servidor-6)
-- [Instalación de servicios del servidor 7](#instalacion-de-servicios-del-servidor-7)
-
+- [Instalación de servicios del servidor 1](#Instalación-de-servicios-del-servidor-2)
+- [Instalación de servicios del servidor 1](#Instalación-de-servicios-del-servidor-3)
+- [Instalación de servicios del servidor 1](#Instalación-de-servicios-del-servidor-4)
+- [Instalación de servicios del servidor 1](#Instalación-de-servicios-del-servidor-5)
+- [Instalación de servicios del servidor 1](#Instalación-de-servicios-del-servidor-6)
+- [Instalación de servicios del servidor 1](#Instalación-de-servicios-del-servidor-7)
 ## Scripts.
 extagram.php:
 ```bash
