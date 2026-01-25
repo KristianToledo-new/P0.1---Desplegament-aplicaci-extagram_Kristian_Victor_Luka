@@ -1,6 +1,6 @@
 ## Índice
-- [Creacion de VPC](#Scripts)
-- [Instalación de servicios.](#Instalación-de-servicios.)
+- [Scripts](#Scripts)
+- [Instalación de servicios del servidor 1.](#Instalación de servicios del servidor 1)
 - 
 
 ## Scripts.
