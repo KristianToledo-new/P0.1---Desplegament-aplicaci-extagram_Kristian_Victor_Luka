@@ -141,6 +141,43 @@ Instalacion del ngix y php:
 ```bash
 sudo apt install -y nginx php-fpm php-mysql
 ```
+Arranque de servicios:
+```bash
+sudo apt install -y nginx php-fpm php-mysql
+```
+Comprobamos estatus NGINX:
+```bash
+sudo apt install -y nginx php-fpm php-mysql
+```
+Comprobamos estatus PHP:
+```bash
+sudo apt install -y nginx php-fpm php-mysql
+```
+Verificamos Socket:
+```bash
+sudo apt install -y nginx php-fpm php-mysql
+```
+Ajustamos NGINX para usar el socket que queremos:
+```bash
+sudo apt install -y nginx php-fpm php-mysql
+```
+Comprobamos que funciona nuestro NGINX con nuestra IP publica:
+```bash
+sudo apt install -y nginx php-fpm php-mysql
+```
+##Creacion de pagina web.
+Creamos la carpeta de nuestra web:
+```bash
+sudo apt install -y nginx php-fpm php-mysql
+```
+Crear extagram.php (Version de prueba):
+```bash
+sudo apt install -y nginx php-fpm php-mysql
+```
+Creamos el site de NGINX:
+```bash
+sudo apt install -y nginx php-fpm php-mysql
+```
 
 ## Instalación de servicios del servidor 2.
 Instalacion del ngix y php:
