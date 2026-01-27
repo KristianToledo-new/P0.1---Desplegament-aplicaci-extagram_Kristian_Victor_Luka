@@ -143,40 +143,67 @@ sudo apt install -y nginx php-fpm php-mysql
 ```
 Arranque de servicios:
 ```bash
-sudo apt install -y nginx php-fpm php-mysql
+sudo systemctl enable --now php8.3-fpm
+sudo systemctl enable --now nginx
 ```
 Comprobamos estatus NGINX:
 ```bash
-sudo apt install -y nginx php-fpm php-mysql
+systemctl status nginx
 ```
 Comprobamos estatus PHP:
 ```bash
-sudo apt install -y nginx php-fpm php-mysql
+sudo systemctl status php8.3-fpm --no-pager
 ```
 Verificamos Socket:
 ```bash
-sudo apt install -y nginx php-fpm php-mysql
+ls -l /run/php/
 ```
+
 Ajustamos NGINX para usar el socket que queremos:
 ```bash
-sudo apt install -y nginx php-fpm php-mysql
+location ~ \.php$ {
+    include snippets/fastcgi-php.conf;
+    fastcgi_pass unix:/run/php/php8.3-fpm.sock;
+}
 ```
-Comprobamos que funciona nuestro NGINX con nuestra IP publica:
 ```bash
-sudo apt install -y nginx php-fpm php-mysql
+sudo nginx -t
+sudo systemctl reload nginx
 ```
+
 ##Creacion de pagina web.
 Creamos la carpeta de nuestra web:
 ```bash
-sudo apt install -y nginx php-fpm php-mysql
+sudo mkdir -p /var/www/extagram
+sudo chown -R www-data:www-data /var/www/extagram
 ```
 Crear extagram.php (Version de prueba):
 ```bash
-sudo apt install -y nginx php-fpm php-mysql
+<?php
+echo "<h1>Extagram backend</h1>";
+echo "<p>Servidor: " . gethostname() . "</p>";
+echo "<p>Hora: " . date("H:i:s") . "</p>";
+?>
 ```
 Creamos el site de NGINX:
 ```bash
-sudo apt install -y nginx php-fpm php-mysql
+server {
+    listen 80;
+    server_name _;
+
+    root /var/www/extagram;
+    index extagram.php;
+
+    location / {
+        try_files $uri $uri/ /extagram.php;
+    }
+
+    location ~ \.php$ {
+        include fastcgi_params;
+        fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
+        fastcgi_pass unix:/run/php/php8.3-fpm.sock;
+    }
+}
 ```
 
 ## Instalación de servicios del servidor 2.
