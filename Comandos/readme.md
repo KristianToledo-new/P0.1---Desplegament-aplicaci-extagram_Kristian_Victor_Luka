@@ -136,7 +136,7 @@ header("location: /");
 
 
 
-## Instalación de servicios del servidor 1.
+## Instalación de servicios del servidor 2.
 Instalacion del ngix y php:
 ```bash
 sudo apt install -y nginx php-fpm php-mysql
@@ -206,12 +206,6 @@ server {
 }
 ```
 
-## Instalación de servicios del servidor 2.
-Instalacion del ngix y php:
-```bash
-sudo apt install -y nginx php-fpm php-mysql
-```
-
 ## Instalación de servicios del servidor 3.
 Instalacion del ngix y php:
 ```bash
@@ -231,6 +225,12 @@ sudo apt install -y nginx php-fpm php-mysql
 ```
 
 ## Instalación de servicios del servidor 6.
+Instalacion del ngix y php:
+```bash
+sudo apt install -y nginx php-fpm php-mysql
+```
+
+## Instalación de servicios del servidor 7.
 Instalacion del ngix y php:
 ```bash
 sudo apt install -y nginx php-fpm php-mysql
