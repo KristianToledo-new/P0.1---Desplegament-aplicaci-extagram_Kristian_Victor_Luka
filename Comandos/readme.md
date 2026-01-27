@@ -171,7 +171,7 @@ sudo nginx -t
 sudo systemctl reload nginx
 ```
 
-##Creacion de pagina web.
+## Creacion de pagina web.
 Creamos la carpeta de nuestra web:
 ```bash
 sudo mkdir -p /var/www/extagram
@@ -205,7 +205,16 @@ server {
     }
 }
 ```
-
+Crear endpoint /health en S2 y comprobación:
+```bash
+location = /health {
+    return 200 "OK";
+}
+```
+Comprobación:
+```bash
+curl http://localhost/health
+```
 ## Instalación de servicios del servidor 3.
 Instalacion del ngix y php:
 ```bash
