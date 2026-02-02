@@ -187,6 +187,7 @@ Nos conectamos a la instantánea por SSH
 # Prueba de tolerancia a fallos
 
 <img width="498" height="47" alt="image" src="https://github.com/user-attachments/assets/566f2142-3819-486d-a64d-122f78cbad51" />
+
 Vamos a nuestro S2 y apagamos el NGINX
 
 <img width="596" height="242" alt="image" src="https://github.com/user-attachments/assets/10ffe884-6e77-4882-be64-9dd7b51614c5" />
