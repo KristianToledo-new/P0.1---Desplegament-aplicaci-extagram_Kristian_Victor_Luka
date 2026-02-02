@@ -117,9 +117,14 @@ Se habilitan y arrancan los servicios PHP 8.3-FPM y Nginx mediante systemctl par
 
 <img width="599" height="95" alt="Captura de pantalla 2026-02-02 115556" src="https://github.com/user-attachments/assets/7944ffa9-2ba5-46c2-9b3c-1a26186504b0" />
 
+El comando ls -l /run/php/ comprueba la existencia del archivo socket (php8.3-fpm.sock), que es el "túnel" indispensable para que Nginx pueda enviarle las peticiones de la web a PHP para que las procese.
+
 ## Ajustamos NGINX para usar el socket que queremos
 
 <img width="599" height="174" alt="image" src="https://github.com/user-attachments/assets/a98e256e-7f9c-434f-8ff7-122bc235395b" />
+
+Esta imagen muestra la configuración final de enlace entre el servidor web y el motor de PHP. Aquí tienes la explicación en una frase:
+Se edita el archivo de sitio en Nginx para que redirija las peticiones .php al socket de PHP 8.3-FPM, verificando después que la sintaxis es correcta con nginx -t y aplicando los cambios con un reload.
 
 ## Comprobamos que funciona nuestro NGINX con nuestra IP publica
 
@@ -130,13 +135,20 @@ Se habilitan y arrancan los servicios PHP 8.3-FPM y Nginx mediante systemctl par
 
 <img width="596" height="47" alt="image" src="https://github.com/user-attachments/assets/fe2cb038-ca77-4df0-b9ce-d336b9d3f62d" />
 
+Hemos creado la carpeta del proyecto y le he dado la propiedad al usuario www-data para que el servidor web pueda gestionar los archivos sin problemas de permisos y luego he configurado la conexión entre Nginx y PHP, verificado que no cometí errores de sintaxis y reiniciado el servicio para activar la web.
+
 ## Crear extagram.php (Version de prueba)
 
 <img width="600" height="106" alt="image" src="https://github.com/user-attachments/assets/328da8a7-afe3-4064-a6f4-391525613d71" />
 
+Hemos creado el archivo extagram.php dentro del directorio del proyecto, escribiendo un pequeño código que mostrará en pantalla el nombre del servidor y la hora actual para confirmar que el backend ya está vivo.
+
 ## Creamos el site de NGINX
 
 <img width="593" height="234" alt="image" src="https://github.com/user-attachments/assets/bdeba23d-bdde-44cf-a0b4-69f8e188dcd2" />
+
+Hemos configurado el archivo de sitio de Nginx para definir la ruta del proyecto (/var/www/extagram), establecer extagram.php como página principal y habilitar el procesamiento de PHP a través del socket de PHP 8.3-FPM.
+
 
 ## Nuestra página web (Momentánea)
 
@@ -149,15 +161,21 @@ Se habilitan y arrancan los servicios PHP 8.3-FPM y Nginx mediante systemctl par
 
 <img width="594" height="197" alt="image" src="https://github.com/user-attachments/assets/37d3330a-b576-4b07-913a-3624c42cf0a4" />
 
+Hemos registrado la instancia S2 dentro del grupo de destinos del balanceador de carga en AWS para que empiece a recibir tráfico real por el puerto 80.
+
 ## Crear endpoint /health en S2
 
 <img width="601" height="77" alt="image" src="https://github.com/user-attachments/assets/69097896-862d-4208-97a2-1891c74d1f99" />
 
 <img width="502" height="40" alt="image" src="https://github.com/user-attachments/assets/e3569911-1a29-403f-b981-19a8306a0111" />
 
+Hemos configurado una ruta de salud (/health) en Nginx para que devuelva un código 200 OK y hemos verificado con el comando curl que el servidor responde correctamente, asegurando así que el balanceador de carga lo reconozca como un destino sano.
+
 ## Cambiamos el Health Check del Target Group
 
 <img width="587" height="105" alt="image" src="https://github.com/user-attachments/assets/2b98f0ff-fda9-4949-8f97-241f0e72567c" />
+
+Hemos definido en el balanceador de carga de AWS que la ruta oficial para verificar si el servidor está vivo es /health, estableciendo que tras 5 comprobaciones exitosas el sistema se marque como "en buen estado".
 
 ## Ahora nos funciona correctamente
 
@@ -169,6 +187,8 @@ Se habilitan y arrancan los servicios PHP 8.3-FPM y Nginx mediante systemctl par
 <img width="604" height="388" alt="image" src="https://github.com/user-attachments/assets/ab21cc8c-6305-43de-b21c-3074c2affd78" />
 
 <img width="598" height="335" alt="image" src="https://github.com/user-attachments/assets/5f254e22-8cc4-4212-9736-9d3b19300b10" />
+
+Hemos solicitado la creación de una imagen (AMI) a partir de nuestra instancia S2 ya configurada, llamándola "AMI-Extagram-Backend-S2", con el objetivo de poder clonar este servidor exacto y lanzar la instancia S3 en cuestión de segundos.
 
 ## Tiempo de espera 
 
@@ -186,13 +206,14 @@ Después de esperar unos minutos para que la imagen está habilitada, empezamos 
 
 <img width="598" height="497" alt="image" src="https://github.com/user-attachments/assets/474a73c7-c428-49fd-b81e-374ac24f54f7" />
 
-Nos conectamos a la instantánea por SSH
+Hemos accedido por SSH a la nueva instancia S3 (con IP 10.0.1.123) y hemos ejecutado un par de pruebas rápidas: primero confirmamos que la ruta de salud responde "OK" y luego verificamos que la web principal ya está funcionando, mostrando correctamente el nombre del servidor y la hora sincronizada.
 
 ## Registramos el S3 en el Grupo de destino
 
 <img width="370" height="441" alt="image" src="https://github.com/user-attachments/assets/ffd689b9-a142-4f94-ae4c-edb3cd2e84b6" />
 
 <img width="593" height="150" alt="image" src="https://github.com/user-attachments/assets/c473c4a4-f9fe-4a8b-9737-250106fefca4" />
+
 # Prueba de tolerancia a fallos
 
 
