@@ -1,7 +1,15 @@
 # Projecte
 
 # Inicio
+
+<img width="566" height="664" alt="image" src="https://github.com/user-attachments/assets/422ae6d5-b4bc-474e-9f07-bc4625cf3a69" />
+
+Primero de todo esta imagen representa la arquitectura lógica y el flujo de datos de tu proyecto Extagram. Es el mapa de cómo viaja la información desde que el usuario entra en la web hasta que se guardan sus fotos o datos.
+
 # Guía de Inicio: Proyecto Extagram
+
+<img width="567" height="369" alt="image" src="https://github.com/user-attachments/assets/e63238a4-ae1c-46b2-bf31-1d84f3dee38d" />
+
 Esta guía detalla los pasos iniciales y las opciones técnicas para el despliegue de una aplicación web de alta disponibilidad y escalabilidad.
 ## Gestión y Control de Versiones
 Antes de iniciar el desarrollo técnico, es obligatorio configurar el entorno de colaboración:
