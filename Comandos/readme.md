@@ -253,8 +253,3 @@ Instalacion del ngix y php:
 sudo apt install -y nginx php-fpm php-mysql
 ```
 
-## Instalación de servicios del servidor 7.
-Instalacion del ngix y php:
-```bash
-sudo apt install -y nginx php-fpm php-mysql
-```
