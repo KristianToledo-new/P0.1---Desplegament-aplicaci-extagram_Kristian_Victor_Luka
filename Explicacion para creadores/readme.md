@@ -58,18 +58,18 @@ Para el primer despliegue funcional, se debe utilizar el siguiente esquema:
 <img width="1181" height="226" alt="image" src="https://github.com/user-attachments/assets/9678c82f-bf01-4a9b-9687-486379ccaa6a" />
 Se muestra la creacion de la instancia inicial para poder comenzar con el trabajo.
 
-## Creación de S2
+# Creación de S2
 <img width="730" height="566" alt="image" src="https://github.com/user-attachments/assets/f1f87f87-8009-44be-8abd-3f78ffd717cd" />
 
 Se confirma la creación de la VPC-Extagram-vpc con el direccionamiento IP 10.0.0.0/16, estableciendo la red privada virtual del proyecto
 
-# Instancia está creada.
+## Instancia está creada.
 
 <img width="741" height="348" alt="image" src="https://github.com/user-attachments/assets/fd0a5ce0-2340-41bb-a0bf-9099c5fa3595" />
 
 Volvemos a confirmar la si la instancia está creada.
 
-# Iniciación.
+## Iniciación.
 
 <img width="746" height="178" alt="image" src="https://github.com/user-attachments/assets/afe4acc4-c57d-4743-98c2-6d0cac48e480" />
 
@@ -78,8 +78,8 @@ Comando de entrada: Se ejecuta ssh -i para conectar con el usuario ubuntu en la 
 Verificación: El sistema pide confirmar la huella digital (fingerprint) de la clave para asegurar que el destino es el correcto.
 Inicio de sesión: Tras confirmar con un "yes", se obtiene acceso a la terminal remota para configurar Nginx o PHP-FPM.
 
-## Instalación de servicios.
-# Instalacion del ngix y php:
+# Instalación de servicios.
+## Instalacion del ngix y php:
 
 <img width="672" height="291" alt="image" src="https://github.com/user-attachments/assets/040acaa9-6da5-45c5-827b-041301fd37f5" />
 
@@ -88,80 +88,80 @@ Gestión de dependencias: El sistema identifica automáticamente los paquetes ne
 Preparación del entorno: Esta acción prepara al servidor S2 para procesar el script extagram.php y conectar con la base de datos S7.
 Progreso técnico: La captura confirma que se están descargando 5676 kB de archivos desde los repositorios oficiales de Ubuntu para activar la infraestructura web.
 
-# Arranque de los servicios
+## Arranque de los servicios
 
 <img width="659" height="135" alt="image" src="https://github.com/user-attachments/assets/e296abd7-8cea-49d1-bb70-5a00ef6a6c5f" />
 
 Esta captura muestra la habilitación y arranque inmediato de los servicios Nginx y PHP 8.3-FPM en el servidor mediante el comando systemctl, asegurando que se inicien automáticamente con el sistema.
 
-# Comprobamos estatus Nginx
+## Comprobamos estatus Nginx
 
 <img width="665" height="200" alt="image" src="https://github.com/user-attachments/assets/c31a935c-641f-4b18-8a79-3d89bba58ca9" />
 
 Se habilitan y arrancan los servicios PHP 8.3-FPM y Nginx mediante systemctl para que funcionen inmediatamente y se inicien automáticamente al arrancar el servidor.
 
-# Comprobamos estatus PHP
+## Comprobamos estatus PHP
 
 <img width="665" height="200" alt="image" src="https://github.com/user-attachments/assets/704f90a8-cc21-4e56-a15d-6e7a3c2792f5" />
 
-# Verificamos Socket
+## Verificamos Socket
 
 <img width="599" height="95" alt="Captura de pantalla 2026-02-02 115556" src="https://github.com/user-attachments/assets/7944ffa9-2ba5-46c2-9b3c-1a26186504b0" />
 
-# Ajustamos NGINX para usar el socket que queremos
+## Ajustamos NGINX para usar el socket que queremos
 
 <img width="599" height="174" alt="image" src="https://github.com/user-attachments/assets/a98e256e-7f9c-434f-8ff7-122bc235395b" />
 
-# Comprobamos que funciona nuestro NGINX con nuestra IP publica
+## Comprobamos que funciona nuestro NGINX con nuestra IP publica
 
 <img width="601" height="217" alt="image" src="https://github.com/user-attachments/assets/f3eacd19-3111-4329-b2c9-cccd97dacbdb" />
 
-## Creacion de pagina web
-# Creamos la carpeta de nuestra web
+# Creacion de pagina web
+## Creamos la carpeta de nuestra web
 
 <img width="596" height="47" alt="image" src="https://github.com/user-attachments/assets/fe2cb038-ca77-4df0-b9ce-d336b9d3f62d" />
 
-# Crear extagram.php (Version de prueba)
+## Crear extagram.php (Version de prueba)
 
 <img width="600" height="106" alt="image" src="https://github.com/user-attachments/assets/328da8a7-afe3-4064-a6f4-391525613d71" />
 
-# Creamos el site de NGINX
+## Creamos el site de NGINX
 
 <img width="593" height="234" alt="image" src="https://github.com/user-attachments/assets/bdeba23d-bdde-44cf-a0b4-69f8e188dcd2" />
 
-# Nuestra página web (Momentánea)
+## Nuestra página web (Momentánea)
 
 <img width="615" height="146" alt="image" src="https://github.com/user-attachments/assets/f39104a1-a048-4847-bd41-4af703ce546c" />
 
-## Metemos S2 detrás del Load Balancer (S1)
-# Registrar S2 en el Target Group (TG-Extagram)
+# Metemos S2 detrás del Load Balancer (S1)
+## Registrar S2 en el Target Group (TG-Extagram)
 
 <img width="587" height="380" alt="image" src="https://github.com/user-attachments/assets/4bc3d4a9-4451-4467-82d2-3719c2adfc2e" />
 
 <img width="594" height="197" alt="image" src="https://github.com/user-attachments/assets/37d3330a-b576-4b07-913a-3624c42cf0a4" />
 
-# Crear endpoint /health en S2
+## Crear endpoint /health en S2
 
 <img width="601" height="77" alt="image" src="https://github.com/user-attachments/assets/69097896-862d-4208-97a2-1891c74d1f99" />
 
 <img width="502" height="40" alt="image" src="https://github.com/user-attachments/assets/e3569911-1a29-403f-b981-19a8306a0111" />
 
-# Cambiamos el Health Check del Target Group
+## Cambiamos el Health Check del Target Group
 
 <img width="587" height="105" alt="image" src="https://github.com/user-attachments/assets/2b98f0ff-fda9-4949-8f97-241f0e72567c" />
 
-# Ahora nos funciona correctamente
+## Ahora nos funciona correctamente
 
 <img width="592" height="101" alt="image" src="https://github.com/user-attachments/assets/79370aa8-cae5-443f-bb1c-06548ffe019c" />
 
-## Creacion de S3
-# Realizamos una imagen de la instantánea S2
+# Creacion de S3
+## Realizamos una imagen de la instantánea S2
 
 <img width="604" height="388" alt="image" src="https://github.com/user-attachments/assets/ab21cc8c-6305-43de-b21c-3074c2affd78" />
 
 <img width="598" height="335" alt="image" src="https://github.com/user-attachments/assets/5f254e22-8cc4-4212-9736-9d3b19300b10" />
 
-# Tiempo de espera 
+## Tiempo de espera 
 
 <img width="606" height="498" alt="image" src="https://github.com/user-attachments/assets/7567c3ea-3059-443b-8754-300f3702c9fb" />
 
@@ -169,17 +169,17 @@ Después de esperar unos minutos para que la imagen está habilitada, empezamos 
 
 <img width="473" height="421" alt="image" src="https://github.com/user-attachments/assets/0230ffd7-8929-4b33-8ec4-6bd82e9534c8" />
 
-# Instantanea creada
+## Instantanea creada
 
 <img width="601" height="128" alt="image" src="https://github.com/user-attachments/assets/206ea590-9d35-4016-aef6-d83f4cd4ce50" />
 
-# Conexión
+## Conexión
 
 <img width="598" height="497" alt="image" src="https://github.com/user-attachments/assets/474a73c7-c428-49fd-b81e-374ac24f54f7" />
 
 Nos conectamos a la instantánea por SSH
 
-# Registramos el S3 en el Grupo de destino
+## Registramos el S3 en el Grupo de destino
 
 <img width="370" height="441" alt="image" src="https://github.com/user-attachments/assets/ffd689b9-a142-4f94-ae4c-edb3cd2e84b6" />
 
