@@ -1,5 +1,21 @@
 # Projecte
+# **AP - P0.1---Despliegue-aplicacin-extagram - Grupo 4** 
 
+
+## Miembros del equipo 
+
+- Kristian Toledo
+- Luka ukleba
+- Victor Serrano
+
+## Índice
+- [Inicio](#Inicio)
+- [Creacion de VPC](#Creacion-de-VPC)
+- [Instalación de servicios.](#Instalación-de-servicios.)
+- [Creación de S2](#Creación-de-S2)
+- [Creación de S3](#Creación-de-S3)
+- [Creación de S4](#Creacion-de-s4)
+- 
 # Inicio
 
 <img width="566" height="664" alt="image" src="https://github.com/user-attachments/assets/422ae6d5-b4bc-474e-9f07-bc4625cf3a69" />
@@ -70,21 +86,7 @@ Para el primer despliegue funcional, se debe utilizar el siguiente esquema:
 -Base de datos: extagram_db.
 -Usuario: extagram_admin con contraseña pass123.
 -Tabla inicial: posts con columnas para el texto del post y la URL de la fotografía.
-# **AP - P0.1---Despliegue-aplicacin-extagram - Grupo 4** 
 
-
-## Miembros del equipo 
-
-- Kristian Toledo
-- Luka ukleba
-- Victor Serrano
-
-## Índice
-- [Creacion de VPC](#Creacion-de-VPC)
-- [Instalación de servicios.](#Instalación-de-servicios.)
-- [Creación de S2](#Creación-de-S2)
-- [Creación de S3](#Creación-de-S3)
-- [Creación de S4](#Creacion-de-s4)
 
 ## Creacion de VPC
 <img width="1181" height="226" alt="image" src="https://github.com/user-attachments/assets/9678c82f-bf01-4a9b-9687-486379ccaa6a" />
