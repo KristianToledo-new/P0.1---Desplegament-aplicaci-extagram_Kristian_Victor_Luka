@@ -7,6 +7,29 @@
 <img width="567" height="369" alt="image" src="https://github.com/user-attachments/assets/e63238a4-ae1c-46b2-bf31-1d84f3dee38d" />
 
 Primero de todo esta imagen representa la arquitectura lógica y el flujo de datos de tu proyecto Extagram. Es el mapa de cómo viaja la información desde que el usuario entra en la web hasta que se guardan sus fotos o datos.
+Aquí tienes el resumen completo de lo que hemos hecho hasta ahora, uniendo la configuración real en AWS con la simulación que estamos montando:
+
+## La Idea del Packet Tracer
+El objetivo de Packet Tracer es crear una "maqueta" visual y funcional de la infraestructura que estamos desplegando en la nube. Mientras que en AWS todo son menús y comandos, aquí hemos diseñado el esquema físico para entender cómo fluyen los datos:
+
+El Router: Representa nuestra salida a Internet y la puerta de enlace de la VPC.
+
+El Switch: Es el corazón de nuestra red local que conecta todos los servidores.
+
+Los Servidores (S1-S7): Cada uno cumple la función específica que definimos en el diagrama de arquitectura (Balanceador, App, DB, etc.).
+
+## Todo lo que hemos hecho (paso a paso)
+Preparación del Entorno: Hemos creado la estructura de directorios en el servidor y hemos ajustado los permisos para que el usuario www-data pueda trabajar sin restricciones.
+
+Configuración del Backend: Hemos programado el archivo extagram.php para que nos devuelva el nombre de la instancia y la hora, permitiéndonos verificar qué servidor está respondiendo en cada momento.
+
+Conexión Nginx-PHP: Hemos configurado Nginx para que se comunique con el motor PHP a través de un socket, hemos validado que no hubiera errores y hemos reiniciado el servicio.
+
+Control de Salud (Health Check): Hemos creado una ruta específica (/health) que responde con un "OK". Hemos configurado el balanceador de AWS para que use esta ruta y sepa si el servidor está "sano" antes de enviarle tráfico.
+
+Escalabilidad y Clonación: Hemos generado una imagen de Amazon (AMI) de nuestro servidor S2 ya configurado. Gracias a esto, hemos lanzado la instancia S3 y hemos comprobado que funciona exactamente igual que la anterior sin tener que repetir todo el trabajo.
+
+Simulación Física: Hemos conectado todos los dispositivos en Packet Tracer usando el cableado automático y hemos empezado a asignar las direcciones IP fijas a cada servidor para que la red sea idéntica a la de AWS.
 
 # Guía de Inicio: Proyecto Extagram
 
