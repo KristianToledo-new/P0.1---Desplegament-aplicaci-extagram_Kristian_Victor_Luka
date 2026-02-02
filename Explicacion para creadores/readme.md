@@ -10,8 +10,6 @@ Primero de todo esta imagen representa la arquitectura lógica y el flujo de dat
 
 # Guía de Inicio: Proyecto Extagram
 
-<img width="567" height="369" alt="image" src="https://github.com/user-attachments/assets/e63238a4-ae1c-46b2-bf31-1d84f3dee38d" />
-
 Esta guía detalla los pasos iniciales y las opciones técnicas para el despliegue de una aplicación web de alta disponibilidad y escalabilidad.
 ## Gestión y Control de Versiones
 Antes de iniciar el desarrollo técnico, es obligatorio configurar el entorno de colaboración:
