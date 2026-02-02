@@ -215,6 +215,8 @@ Comprobación:
 ```bash
 curl http://localhost/health
 ```
+
+
 ## Instalación de servicios del servidor 3.
 Conexión:
 ```bash
