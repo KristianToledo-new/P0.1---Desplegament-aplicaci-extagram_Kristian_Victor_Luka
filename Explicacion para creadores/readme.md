@@ -1,9 +1,45 @@
 # Projecte
 
 # Inicio
-# **AP - P0.1---Despliegue-aplicacin-extagram - Grupo 4** 
+# Guía de Inicio: Proyecto Extagram
+Esta guía detalla los pasos iniciales y las opciones técnicas para el despliegue de una aplicación web de alta disponibilidad y escalabilidad.
+## Gestión y Control de Versiones
+Antes de iniciar el desarrollo técnico, es obligatorio configurar el entorno de colaboración:
 
-***Objetivo***
+-GitHub: Se debe crear un repositorio central. El acceso al servidor se realizará mediante intercambio de claves pública/privada.
+
+-ProofHub: Herramienta obligatoria para la planificación y gestión de tareas. Es necesario adjuntar capturas de pantalla de esta herramienta en las actas de cada sprint.
+
+-Documentación MD: Toda la documentación, incluyendo las actas de las reuniones (sprint planning y sprint review), debe estar en formato Markdown dentro del repositorio.
+## Opciones de Despliegue y Arquitectura
+El proyecto se divide en fases evolutivas para asegurar el aprendizaje de la infraestructura:
+
+-Opción A: Monolítica (Sprint 1)	
+Instalación de NGINX o Apache en una sola máquina.
+
+Repasar la configuración de módulos y servicios básicos.
+
+-Opción B: Segregada (Sprints 2 y 3)	
+Uso de Docker para separar la aplicación en 7 servidores distintos.
+
+Simular un entorno real de alta disponibilidad con balanceo de carga.
+## Componentes de la Infraestructura (S1-S7)
+-S1 (Proxy/Balanceador): Servidor Nginx que recibe todas las peticiones y realiza un balanceo de carga entre S2 y S3.
+
+-S2 y S3 (App Servers): Servicios PHP-FPM encargados de ejecutar el script dinámico extagram.php.
+
+-S4 (Upload Server): Servicio PHP-FPM que ejecuta upload.php para almacenar imágenes en el servidor.
+
+-S5 y S6 (Static Servers): Servidores Nginx para servir imágenes (S5) y archivos de estilo o gráficos como style.css y preview.svg (S6).
+
+-S7 (Base de Datos): Servidor MySQL que almacena la información y replica archivos como "blobs" por seguridad.
+## Configuración Inicial de la Base de Datos
+Para el primer despliegue funcional, se debe utilizar el siguiente esquema:
+
+-Base de datos: extagram_db.
+-Usuario: extagram_admin con contraseña pass123.
+-Tabla inicial: posts con columnas para el texto del post y la URL de la fotografía.
+# **AP - P0.1---Despliegue-aplicacin-extagram - Grupo 4** 
 
 
 ## Miembros del equipo 
