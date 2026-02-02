@@ -54,6 +54,7 @@ Para el primer despliegue funcional, se debe utilizar el siguiente esquema:
 - 
 ## Creacion de VPC
 <img width="1181" height="226" alt="image" src="https://github.com/user-attachments/assets/9678c82f-bf01-4a9b-9687-486379ccaa6a" />
+Se muestra la creacion de la instancia inicial para poder comenzar con el trabajo.
 
 ### 1.1 Creacion y configuracion de instancia del S2
 
