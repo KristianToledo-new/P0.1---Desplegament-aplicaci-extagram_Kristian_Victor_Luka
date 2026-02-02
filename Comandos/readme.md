@@ -216,9 +216,15 @@ Comprobación:
 curl http://localhost/health
 ```
 ## Instalación de servicios del servidor 3.
-Instalacion del ngix y php:
+Conexión:
 ```bash
-sudo apt install -y nginx php-fpm php-mysql
+ssh -i "S2-Extagram.pem" ubuntu@ec2-54-91-115-55.compute-1.amazonaws.com
+```
+```bash
+curl http://localhost/health
+```
+```bash
+curl http://localhost | head
 ```
 
 ## Instalación de servicios del servidor 4.
