@@ -53,6 +53,7 @@ Para el primer despliegue funcional, se debe utilizar el siguiente esquema:
 - [Instalación de servicios.](#Instalación-de-servicios.)
 - [Creación de S2](#Creación-de-S2)
 - [Creación de S3](#Creación-de-S3)
+- [Creación de S4](#Creacion-de-s4)
 
 ## Creacion de VPC
 <img width="1181" height="226" alt="image" src="https://github.com/user-attachments/assets/9678c82f-bf01-4a9b-9687-486379ccaa6a" />
@@ -195,4 +196,4 @@ Vamos a nuestro S2 y apagamos el NGINX
 
 Vemos el DNS del ALB y sigue funcionando, ya que responde a nuestro S3
 
-
+## Creación de S4
