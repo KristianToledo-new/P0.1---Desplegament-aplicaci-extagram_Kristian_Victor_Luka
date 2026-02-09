@@ -239,7 +239,7 @@ Hemos accedido por SSH a la nueva instancia S3 (con IP 10.0.1.123) y hemos ejecu
 
 <img width="593" height="150" alt="image" src="https://github.com/user-attachments/assets/c473c4a4-f9fe-4a8b-9737-250106fefca4" />
 
-# Prueba de tolerancia a fallos
+## Prueba de tolerancia a fallos
 
 
 <img width="498" height="47" alt="image" src="https://github.com/user-attachments/assets/566f2142-3819-486d-a64d-122f78cbad51" />
@@ -250,4 +250,34 @@ Vamos a nuestro S2 y apagamos el NGINX
 
 Vemos el DNS del ALB y sigue funcionando, ya que responde a nuestro S3
 
-## Creación de S4
+# Creación de S4
+## Creación de instancia
+<img width="722" height="573" alt="image" src="https://github.com/user-attachments/assets/c545d34c-326c-4e1b-a87e-7ce21b11f985" />
+
+## Grupo de seguridad s4
+<img width="629" height="569" alt="image" src="https://github.com/user-attachments/assets/75a714c6-de27-4d77-999a-b5b1766ff8d3" />
+
+## Instalar Docker
+<img width="716" height="82" alt="image" src="https://github.com/user-attachments/assets/0d2f5825-38d7-431d-8be5-401b010eed14" />
+
+<img width="592" height="58" alt="image" src="https://github.com/user-attachments/assets/9c9f7dbb-75fa-4505-bdf8-41e1a8b15548" />
+
+<img width="710" height="44" alt="image" src="https://github.com/user-attachments/assets/45690ab3-5c59-4f6c-8400-3a0b911463e4" />
+
+## Montar EFS en S4
+<img width="599" height="25" alt="image" src="https://github.com/user-attachments/assets/55acf8ab-682b-49d7-98b7-4e0327cf89f6" />
+
+# Creacion de S5
+## Creacion del grupo de seguridad
+<img width="726" height="674" alt="image" src="https://github.com/user-attachments/assets/11004f89-746f-4fee-9c93-aedfc0ebff3f" />
+
+<img width="709" height="623" alt="image" src="https://github.com/user-attachments/assets/d3b07458-f77c-48c0-b132-7583e65214e5" />
+## Tabla de enrutamiento
+<img width="731" height="279" alt="image" src="https://github.com/user-attachments/assets/31c45d5e-1684-409f-8ae8-2b623dffe11c" />
+
+
+
+
+
+
+
