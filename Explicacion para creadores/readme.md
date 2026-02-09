@@ -15,6 +15,7 @@
 - [Creación de S2](#Creación-de-S2)
 - [Creación de S3](#Creación-de-S3)
 - [Creación de S4](#Creacion-de-s4)
+- [Creación de S5](#Creacion-de-s5)
 - 
 # Inicio
 
@@ -206,7 +207,7 @@ Hemos definido en el balanceador de carga de AWS que la ruta oficial para verifi
 
 <img width="592" height="101" alt="image" src="https://github.com/user-attachments/assets/79370aa8-cae5-443f-bb1c-06548ffe019c" />
 
-# Creacion de S3
+# Creación de S3
 ## Realizamos una imagen de la instantánea S2
 
 <img width="604" height="388" alt="image" src="https://github.com/user-attachments/assets/ab21cc8c-6305-43de-b21c-3074c2affd78" />
@@ -267,7 +268,7 @@ Vemos el DNS del ALB y sigue funcionando, ya que responde a nuestro S3
 ## Montar EFS en S4
 <img width="599" height="25" alt="image" src="https://github.com/user-attachments/assets/55acf8ab-682b-49d7-98b7-4e0327cf89f6" />
 
-# Creacion de S5
+# Creación de S5
 ## Creacion del grupo de seguridad
 <img width="726" height="674" alt="image" src="https://github.com/user-attachments/assets/11004f89-746f-4fee-9c93-aedfc0ebff3f" />
 
