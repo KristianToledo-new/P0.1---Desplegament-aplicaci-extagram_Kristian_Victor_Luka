@@ -230,9 +230,23 @@ curl http://localhost | head
 ```
 
 ## Instalación de servicios del servidor 4.
-Instalacion del ngix y php:
+Instalacion del Docker:
 ```bash
-sudo apt install -y nginx php-fpm php-mysql
+sudo apt update
+```
+```bash
+sudo apt -y install docker.io
+```
+```bash
+sudo systemctl enable --now docker
+```
+```bash
+sudo usermod -aG docker ubuntu
+```
+
+Instalacion del NFS:
+```bash
+sudo apt install -y nfs-common
 ```
 
 ## Instalación de servicios del servidor 5.
