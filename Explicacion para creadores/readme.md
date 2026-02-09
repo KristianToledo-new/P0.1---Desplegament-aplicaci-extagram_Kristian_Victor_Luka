@@ -273,6 +273,7 @@ Vemos el DNS del ALB y sigue funcionando, ya que responde a nuestro S3
 <img width="726" height="674" alt="image" src="https://github.com/user-attachments/assets/11004f89-746f-4fee-9c93-aedfc0ebff3f" />
 
 <img width="709" height="623" alt="image" src="https://github.com/user-attachments/assets/d3b07458-f77c-48c0-b132-7583e65214e5" />
+
 ## Tabla de enrutamiento
 <img width="731" height="279" alt="image" src="https://github.com/user-attachments/assets/31c45d5e-1684-409f-8ae8-2b623dffe11c" />
 
