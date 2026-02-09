@@ -14,8 +14,8 @@
 - [Instalación de servicios.](#Instalación-de-servicios.)
 - [Creación de S2](#Creación-de-S2)
 - [Creación de S3](#Creación-de-S3)
-- [Creación de S4](#Creacion-de-s4)
-- [Creación de S5](#Creacion-de-s5)
+- [Creación de S4](#Creación-de-S4)
+- [Creación de S5](#Creación-de-S5)
 - 
 # Inicio
 
