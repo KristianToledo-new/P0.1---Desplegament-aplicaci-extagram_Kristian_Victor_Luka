@@ -1,7 +1,6 @@
 ## Índice
 - [Scripts](#Scripts)
-- [Instalación de servicios del servidor 1](#Instalación-de-servicios-del-servidor-1)
-- [Instalación de servicios del servidor 2](#Instalación-de-servicios-del-servidor-2)
+- [Instalación de servicios del servidor 1/2](#Instalación-de-servicios-del-servidor-1/2)
 - [Instalación de servicios del servidor 3](#Instalación-de-servicios-del-servidor-3)
 - [Instalación de servicios del servidor 4](#Instalación-de-servicios-del-servidor-4)
 - [Instalación de servicios del servidor 5](#Instalación-de-servicios-del-servidor-5)
@@ -136,7 +135,7 @@ header("location: /");
 
 
 
-## Instalación de servicios del servidor 2.
+## Instalación de servicios del servidor 1/2.
 Instalacion del ngix y php:
 ```bash
 sudo apt install -y nginx php-fpm php-mysql
