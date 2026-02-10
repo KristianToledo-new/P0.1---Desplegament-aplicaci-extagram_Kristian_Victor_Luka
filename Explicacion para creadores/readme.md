@@ -16,7 +16,9 @@
 - [Creación de S3](#Creación-de-S3)
 - [Creación de S4](#Creación-de-S4)
 - [Creación de S5](#Creación-de-S5)
-- 
+- [Creación de S6](#Creación-de-S6)
+- [Creación de S7](#Creación-de-S7)
+
 # Inicio
 
 <img width="566" height="664" alt="image" src="https://github.com/user-attachments/assets/422ae6d5-b4bc-474e-9f07-bc4625cf3a69" />
@@ -277,7 +279,29 @@ Vemos el DNS del ALB y sigue funcionando, ya que responde a nuestro S3
 ## Tabla de enrutamiento
 <img width="731" height="279" alt="image" src="https://github.com/user-attachments/assets/31c45d5e-1684-409f-8ae8-2b623dffe11c" />
 
+# Creación de S6
+## Verificar Internet
+<img width="683" height="204" alt="image" src="https://github.com/user-attachments/assets/957fda94-005f-4599-8568-b78866e5e225" />
+Una verificación para ver si tenemso conectividad con internet para poder empezar con todo el trabajo.
+## Actualizar 
+<img width="720" height="388" alt="image" src="https://github.com/user-attachments/assets/7a0b88bb-a8dd-4b9b-9c1a-5bb4f0e3620f" />
+Primero de todo hacemos una actualización de todos los paquetes para que posteriormente nos funciones correctamente la instalación
 
+## Instalar herramientas básicas
+<img width="667" height="195" alt="image" src="https://github.com/user-attachments/assets/8262c58b-4aed-414d-a7b4-9b5f1fab8390" />
+Aquí procedemos a hacer la instalación del paquete nfs-common para luego poder montar el EFS.
+
+## Instalación de paquetes
+## web
+<img width="695" height="155" alt="image" src="https://github.com/user-attachments/assets/86af7844-8792-4362-bbf2-ead23c7b3e9f" />
+## php
+<img width="699" height="180" alt="image" src="https://github.com/user-attachments/assets/3ab3bc6d-7621-46ff-ae5c-f42a8cd608e7" />
+## nfs 
+<img width="691" height="164" alt="image" src="https://github.com/user-attachments/assets/c12d993c-4f81-4e5a-b7c0-f8a33c03a535" />
+## Montar EFS 
+<img width="690" height="61" alt="image" src="https://github.com/user-attachments/assets/dc1471ab-673d-409b-8e61-b7453e669971" />
+
+# Creación de S7
 
 
 
