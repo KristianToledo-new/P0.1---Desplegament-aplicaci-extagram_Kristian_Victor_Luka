@@ -294,10 +294,13 @@ Aquí procedemos a hacer la instalación del paquete nfs-common para luego poder
 ## Instalación de paquetes
 ## web
 <img width="695" height="155" alt="image" src="https://github.com/user-attachments/assets/86af7844-8792-4362-bbf2-ead23c7b3e9f" />
+
 ## php
 <img width="699" height="180" alt="image" src="https://github.com/user-attachments/assets/3ab3bc6d-7621-46ff-ae5c-f42a8cd608e7" />
+
 ## nfs 
 <img width="691" height="164" alt="image" src="https://github.com/user-attachments/assets/c12d993c-4f81-4e5a-b7c0-f8a33c03a535" />
+
 ## Montar EFS 
 <img width="690" height="61" alt="image" src="https://github.com/user-attachments/assets/dc1471ab-673d-409b-8e61-b7453e669971" />
 
