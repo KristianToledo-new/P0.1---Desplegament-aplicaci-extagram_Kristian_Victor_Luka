@@ -249,9 +249,19 @@ sudo apt install -y nfs-common
 ```
 
 ## Instalación de servicios del servidor 5.
-Instalacion del ngix y php:
+Instalacion 
 ```bash
-sudo apt install -y nginx php-fpm php-mysql
+sudo apt update
+```
+Actualiza e instala lo mismo “base” que S4
+```bash
+sudo apt -y install nginx apache2 php-fpm php-mysql unzip curl rsync nfs-common
+```
+```bash
+sudo mkdir -p /mnt/extragram-storage
+```
+```bash
+sudo mount -t nfs4 -o nfsvers=4.1 fs-08248a76210436a73.efs.us-east-1.amazonaws.com:/ /mnt/extragram-storage
 ```
 
 ## Instalación de servicios del servidor 6.
