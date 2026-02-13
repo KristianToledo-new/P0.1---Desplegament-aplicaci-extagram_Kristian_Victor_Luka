@@ -229,6 +229,10 @@ curl http://localhost | head
 ```
 
 ## Instalación de servicios del servidor 4.
+Conexión:
+```bash
+ssh -i "S2-Extagram.pem" ubuntu@10.0.40.22
+```
 Instalacion del Docker:
 ```bash
 sudo apt update
@@ -247,7 +251,46 @@ Instalacion del NFS:
 ```bash
 sudo apt install -y nfs-common
 ```
-
+Creacion de archivo: 
+```bash
+sudo mkdir -p /mnt/extragram-storage
+```
+Cuánto espacio de almacenamiento está ocupado:
+```bash
+df -h
+```
+Prueba de escritura y verificación del almacenamiento montado:
+```bash
+sudo touch /mnt/extragram-storage/test.txt
+```
+```bash
+ls /mnt/extragram-storage/
+```
+Contenido completo del archivo /etc/fstab:
+```bash
+LABEL=cloudimg-rootfs   /           ext4   discard,commit=30,errors=remount-ro   0 1
+LABEL=BOOT              /boot       ext4   defaults                      0 2
+LABEL=UEFI              /boot/efi   vfat   umask=0077                    0 1
+fs-08248a76210436a73.efs.us-east-1.amazonaws.com:/ /mnt/extragram-storage nfs4 defaults,_netdev,nfsvers=4.1 0 0
+```
+Comprobación: 
+```bash
+curl http://10.0.4.82
+```
+Reemplazo del directorio web por el nuevo almacenamiento:
+```bash
+sudo rm -rf /var/www/html/
+```
+```bash
+sudo ln -s /mnt/extragram-storage/ /var/www/html
+```
+Creación de la página web de prueba y verificación:
+```bash
+echo "Servidor S4 ok" | sudo tee /mnt/extragram-storage/index.html
+```
+```bash
+curl http://10.0.4.82
+```
 ## Instalación de servicios del servidor 5.
 Instalacion 
 ```bash
