@@ -270,6 +270,30 @@ Vemos el DNS del ALB y sigue funcionando, ya que responde a nuestro S3
 ## Montar EFS en S4
 <img width="599" height="25" alt="image" src="https://github.com/user-attachments/assets/55acf8ab-682b-49d7-98b7-4e0327cf89f6" />
 
+## AWS → EFS → tu File System → copia 
+<img width="601" height="35" alt="image" src="https://github.com/user-attachments/assets/40e129ca-6d56-4ce6-8cc4-35caccc27e9f" />
+
+## Montaje automático al reiniciar (MUY IMPORTANTE)
+<img width="593" height="55" alt="image" src="https://github.com/user-attachments/assets/600ee4af-8348-4597-8488-3c8c6e47c78a" />
+<img width="613" height="114" alt="image" src="https://github.com/user-attachments/assets/61548e6e-c285-4633-ac4a-247d3e294981" />
+
+## Comprobación de que veamos la página de apache 
+
+<img width="610" height="221" alt="image" src="https://github.com/user-attachments/assets/129d421a-99f7-464c-8332-9330acee3b7d" />
+
+## En S4: aplicar la configuración al sistema (copiar a /etc y /var)
+
+<img width="600" height="18" alt="image" src="https://github.com/user-attachments/assets/07d7d4ba-f287-45dd-9b75-66b91e49b578" />
+
+<img width="600" height="18" alt="image" src="https://github.com/user-attachments/assets/8e7ef70f-3b53-4b40-8be9-c4c3f6e4bdc5" />
+
+<img width="581" height="20" alt="image" src="https://github.com/user-attachments/assets/85fc41a0-23a9-45a1-bdd1-d486f8242a54" />
+
+
+## En S2: copiar configuraciones de servicios hacia S4
+
+<img width="596" height="102" alt="image" src="https://github.com/user-attachments/assets/e6499ccb-2764-47fa-bf8f-0af1899eb9ed" />
+
 # Creación de S5
 ## Creacion del grupo de seguridad
 <img width="726" height="674" alt="image" src="https://github.com/user-attachments/assets/11004f89-746f-4fee-9c93-aedfc0ebff3f" />
