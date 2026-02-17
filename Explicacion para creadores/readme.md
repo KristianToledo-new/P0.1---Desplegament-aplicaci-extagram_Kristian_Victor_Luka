@@ -339,6 +339,12 @@ Esta configuracion es importante, el numero de fs porque pertenece a cada equipo
 ##  Iniciar PHP
 <img width="809" height="98" alt="image" src="https://github.com/user-attachments/assets/6feb9d09-c4b4-4ec5-8430-5e217cb144e6" />
 
+## Preview
+<img width="933" height="253" alt="image" src="https://github.com/user-attachments/assets/2f8e4ac1-3b70-4812-a390-8fdbef92c7ff" />
+
+## Style
+<img width="930" height="908" alt="image" src="https://github.com/user-attachments/assets/ce4c4914-dd5f-41c0-960d-df28452a5875" />
+
 # Creación de S7
 Se instaló y configuró un servidor MySQL con la base de datos de Extagram:​
 Instalación de MySQL: Sistema gestor de base de datos
