@@ -263,32 +263,56 @@ Vemos el DNS del ALB y sigue funcionando, ya que responde a nuestro S3
 ## Instalar Docker
 <img width="716" height="82" alt="image" src="https://github.com/user-attachments/assets/0d2f5825-38d7-431d-8be5-401b010eed14" />
 
+Hemos actualizado la lista de paquetes disponibles desde los repositorios .
+
 <img width="592" height="58" alt="image" src="https://github.com/user-attachments/assets/9c9f7dbb-75fa-4505-bdf8-41e1a8b15548" />
 
+Hemos instalado Docker, que es una plataforma para crear, ejecutar y gestionar contenedores . El flag -y confirma automáticamente la instalación.
+
 <img width="710" height="44" alt="image" src="https://github.com/user-attachments/assets/45690ab3-5c59-4f6c-8400-3a0b911463e4" />
+
+Hemos habilitado Docker para que se inicie automáticamente al arrancar el sistema y lo hemos iniciado inmediatamente .
 
 ## Montar EFS en S4
 <img width="599" height="25" alt="image" src="https://github.com/user-attachments/assets/55acf8ab-682b-49d7-98b7-4e0327cf89f6" />
 
+Hemos instalado las herramientas NFS necesarias para montar sistemas de archivos de red.
+​
 ## AWS → EFS → tu File System → copia 
 <img width="601" height="35" alt="image" src="https://github.com/user-attachments/assets/40e129ca-6d56-4ce6-8cc4-35caccc27e9f" />
 
+Hemos montado el sistema de archivos EFS de AWS en el directorio local /mnt/extragram-storage/ usando NFS versión 4.1.
+​
 ## Montaje automático al reiniciar (MUY IMPORTANTE)
 <img width="593" height="55" alt="image" src="https://github.com/user-attachments/assets/600ee4af-8348-4597-8488-3c8c6e47c78a" />
 <img width="613" height="114" alt="image" src="https://github.com/user-attachments/assets/61548e6e-c285-4633-ac4a-247d3e294981" />
+
+Hemos creado un archivo vacío llamado test.txt dentro del EFS montado para verificar que funciona .
+Hemos verificado que el archivo se creó correctamente en el EFS.
+Verificar /etc/fstab:
+La captura muestra el contenido del archivo /etc/fstab que configura el montaje automático:
 
 ## Comprobación de que veamos la página de apache 
 
 <img width="610" height="221" alt="image" src="https://github.com/user-attachments/assets/129d421a-99f7-464c-8332-9330acee3b7d" />
 
+Hemos hecho una petición HTTP al servidor en la IP 10.0.4.82 para verificar que Apache está funcionando .
+Resultado visible: La captura muestra el código HTML de la página por defecto de Apache/Ubuntu, confirmando que el servidor web está activo.
+
 ## En S4: aplicar la configuración al sistema (copiar a /etc y /var)
 
 <img width="600" height="18" alt="image" src="https://github.com/user-attachments/assets/07d7d4ba-f287-45dd-9b75-66b91e49b578" />
 
+Hemos sincronizado la configuración de nginx desde el directorio temporal hacia el directorio oficial de configuración.
+​
+
 <img width="600" height="18" alt="image" src="https://github.com/user-attachments/assets/8e7ef70f-3b53-4b40-8be9-c4c3f6e4bdc5" />
 
+Hemos sincronizado la configuración de Apache desde el directorio temporal hacia el directorio oficial.
+​
 <img width="581" height="20" alt="image" src="https://github.com/user-attachments/assets/85fc41a0-23a9-45a1-bdd1-d486f8242a54" />
 
+Hemos reiniciado nginx para aplicar los cambios de configuración.
 
 ## En S2: copiar configuraciones de servicios hacia S4
 
