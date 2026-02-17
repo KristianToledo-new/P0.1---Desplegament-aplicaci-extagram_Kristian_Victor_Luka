@@ -370,3 +370,7 @@ Le aplicamos los permisos necesarios a /var/www
 <img width="769" height="258" alt="image" src="https://github.com/user-attachments/assets/2cf5c0f8-b82b-4788-b88d-44951211a34a" />
 
 Esto sirve para poder comprobar que hemos instalado si el server funciona con nginx o con apache, en nuestro caso funciona con nginx y se porcederia a hacer todo lo mencionado anteriormente 
+## Mostrar la estructura de la BD 
+<img width="926" height="964" alt="image" src="https://github.com/user-attachments/assets/83b4363b-0199-4bdd-9873-4a792c528164" />
+
+Aqui se muestra la base de datos de extragram correctamente para que nos funciona sin ningun problema
