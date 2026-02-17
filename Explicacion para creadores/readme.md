@@ -303,6 +303,43 @@ Vemos el DNS del ALB y sigue funcionando, ya que responde a nuestro S3
 ## Tabla de enrutamiento
 <img width="731" height="279" alt="image" src="https://github.com/user-attachments/assets/31c45d5e-1684-409f-8ae8-2b623dffe11c" />
 
+## sudo apt update
+<img width="360" height="28" alt="image" src="https://github.com/user-attachments/assets/9a2e62ba-1c93-4fce-b60d-b75ce9a61dd0" />
+
+## Actualiza e instala lo mismo “base” que S4
+<img width="605" height="26" alt="image" src="https://github.com/user-attachments/assets/d26a7b01-e648-4268-826b-a998194d1a05" />
+
+## Montar el EFS en S5
+
+<img width="560" height="18" alt="image" src="https://github.com/user-attachments/assets/53e335ee-c5b5-41c1-8bd5-e3cac59ef52f" />
+
+<img width="602" height="24" alt="image" src="https://github.com/user-attachments/assets/5de6c6ea-9b49-4ad9-a528-6f114f1bb0da" />
+
+Importante(Para que se pueda montar al reiniciar)
+
+<img width="600" height="108" alt="image" src="https://github.com/user-attachments/assets/db6d3f6a-1059-48d5-a193-14b77f681fe5" />
+
+## Permisos
+
+<img width="600" height="108" alt="image" src="https://github.com/user-attachments/assets/08c5d9c4-fc22-4410-ac34-e261f9637dc5" />
+
+Luego entramos en el s5  activar la clonación
+
+<img width="589" height="49" alt="image" src="https://github.com/user-attachments/assets/23aa3df3-86fb-42b2-abd0-30401a512bc6" />
+
+<img width="596" height="169" alt="image" src="https://github.com/user-attachments/assets/096b41ee-5ffa-486c-8113-49064ba22248" />
+
+<img width="607" height="222" alt="image" src="https://github.com/user-attachments/assets/808392b1-08de-406f-91eb-255281df24b8" />
+
+## Reiniciar servidor s5
+<img width="589" height="47" alt="image" src="https://github.com/user-attachments/assets/b4b90bfe-d616-4b1d-afe2-06b650f8b5ed" />
+
+Comprobacion final 
+
+<img width="438" height="38" alt="image" src="https://github.com/user-attachments/assets/2a996c72-10bd-4378-a621-04fcb91722e7" />
+
+<img width="438" height="38" alt="image" src="https://github.com/user-attachments/assets/ef557e5d-d189-4711-a350-d36b27bec87b" />
+
 # Creación de S6
 ## Resumen de configuración S6 
 Server 6 (nginx) - Archivos estáticos
