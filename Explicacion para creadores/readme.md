@@ -306,8 +306,12 @@ Vemos el DNS del ALB y sigue funcionando, ya que responde a nuestro S3
 ## sudo apt update
 <img width="360" height="28" alt="image" src="https://github.com/user-attachments/assets/9a2e62ba-1c93-4fce-b60d-b75ce9a61dd0" />
 
+Hemos actualizado la lista de paquetes disponibles desde los repositorios de Ubuntu . Es el primer paso antes de instalar cualquier software para asegurarnos de tener las versiones más recientes disponibles 
 ## Actualiza e instala lo mismo “base” que S4
+
 <img width="605" height="26" alt="image" src="https://github.com/user-attachments/assets/d26a7b01-e648-4268-826b-a998194d1a05" />
+
+Hemos instalado múltiples paquetes de software 
 
 ## Montar el EFS en S5
 
@@ -315,17 +319,43 @@ Vemos el DNS del ALB y sigue funcionando, ya que responde a nuestro S3
 
 <img width="602" height="24" alt="image" src="https://github.com/user-attachments/assets/5de6c6ea-9b49-4ad9-a528-6f114f1bb0da" />
 
+Hemos creado el directorio /mnt/extragram-storage donde se montará el sistema de archivos EFS (Elastic File System) de AWS . El flag -p crea directorios padres si no existen .
+
 Importante(Para que se pueda montar al reiniciar)
 
 <img width="600" height="108" alt="image" src="https://github.com/user-attachments/assets/db6d3f6a-1059-48d5-a193-14b77f681fe5" />
 
 ## Permisos
+Hemos sincronizado archivos desde el servidor local a otro servidor remoto usando rsync sobre SSH :
+-a: Modo archivo (preserva permisos, timestamps, etc.)
+-v: Verbose (muestra información detallada)
+-z: Comprime datos durante la transferencia
+-e "ssh -i ~/S2-Extagram.pem": Usa SSH con la clave privada S2-Extagram.pem para autenticación
+
+Los directorios que hemos sincronizado son:
+/etc/nginx/: Configuración de nginx
+/etc/apache2: Configuración de Apache
+/var/www/: Archivos del sitio web
 
 <img width="600" height="108" alt="image" src="https://github.com/user-attachments/assets/08c5d9c4-fc22-4410-ac34-e261f9637dc5" />
 
 Luego entramos en el s5  activar la clonación
 
 <img width="589" height="49" alt="image" src="https://github.com/user-attachments/assets/23aa3df3-86fb-42b2-abd0-30401a512bc6" />
+
+Hemos sincronizado el contenido del directorio /home/ubuntu/www/ hacia /var/www/ (directorio web de nginx/apache) :
+-a: Modo archivo (preserva permisos, propietarios, timestamps)
+-v: Modo verbose (muestra archivos mientras se copian)
+
+Resultado visible:
+Enviados 6,508 bytes, recibidos 610 bytes a 14,236.00 bytes/sec
+Total: 92,159 bytes, speedup 12.95
+Archivos sincronizados:
+extagram/
+extagram/extagram.php
+html/
+html/index.nginx-debian.html
+
 
 <img width="596" height="169" alt="image" src="https://github.com/user-attachments/assets/096b41ee-5ffa-486c-8113-49064ba22248" />
 
