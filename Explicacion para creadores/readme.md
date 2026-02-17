@@ -280,6 +280,14 @@ Vemos el DNS del ALB y sigue funcionando, ya que responde a nuestro S3
 <img width="731" height="279" alt="image" src="https://github.com/user-attachments/assets/31c45d5e-1684-409f-8ae8-2b623dffe11c" />
 
 # Creación de S6
+## Resumen de configuración S6 
+Server 6 (nginx) - Archivos estáticos
+Se instaló y configuró un servidor nginx para servir los archivos estáticos de la aplicación Extagram:
+Instalación de nginx: Servidor web ligero para servir contenido estático
+Archivo style.css: Hoja de estilos CSS que define la apariencia visual de la web (colores, formularios, posts, etc.)
+Archivo preview.svg: Icono SVG de cámara que aparece como vista previa antes de subir una imagen
+Función: S6 sirve estos recursos estáticos a través de la URL https://static.extagram.itb/ para que la aplicación tenga diseño visual
+
 ## Verificar Internet
 <img width="683" height="204" alt="image" src="https://github.com/user-attachments/assets/957fda94-005f-4599-8568-b78866e5e225" />
 Una verificación para ver si tenemso conectividad con internet para poder empezar con todo el trabajo.
@@ -332,6 +340,14 @@ Esta configuracion es importante, el numero de fs porque pertenece a cada equipo
 <img width="809" height="98" alt="image" src="https://github.com/user-attachments/assets/6feb9d09-c4b4-4ec5-8430-5e217cb144e6" />
 
 # Creación de S7
+Se instaló y configuró un servidor MySQL con la base de datos de Extagram:​
+Instalación de MySQL: Sistema gestor de base de datos
+Base de datos extagramdb: Almacena toda la información de la aplicación
+Tabla posts: Contiene las publicaciones con dos campos: post (texto) y photourl (URL de la imagen)
+Usuario extagramadmin: Usuario con contraseña pass123 y permisos completos sobre la BD
+​Configuración remota: MySQL configurado para aceptar conexiones desde otros servidores (bind-address 0.0.0.0)
+Función: S7 almacena y gestiona todos los posts publicados en Extagram, actuando como backend de datos
+
 ## Sincronicación 
 <img width="811" height="194" alt="image" src="https://github.com/user-attachments/assets/27aa281a-601b-4637-8db5-5274838ce441" />
 
