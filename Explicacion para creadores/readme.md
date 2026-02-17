@@ -304,17 +304,27 @@ Aquí procedemos a hacer la instalación del paquete nfs-common para luego poder
 ## Montar EFS 
 <img width="690" height="61" alt="image" src="https://github.com/user-attachments/assets/dc1471ab-673d-409b-8e61-b7453e669971" />
 
+Aqui se monta el file para posteriormente tener todo los paquetes listos y operativos
+
 ## Instalación de todos los paquetes
 <img width="768" height="449" alt="image" src="https://github.com/user-attachments/assets/87add068-9cd8-46b8-b703-19fc1e8f1b86" />
+
+Instalamos todos los paquetes que se van a utilizar en el server 6 para poder tener listo, ademas estos paquetes pposteriormente se instalaran en el server 7.
 
 ## Creación de archivos con sus dichos permisos 
 <img width="809" height="201" alt="image" src="https://github.com/user-attachments/assets/4647c5a2-9e87-4bb0-ad37-b4e6b4c466fd" />
 
+Se vuelve a montar el archivo y se le monta en la direccion especificada en el comando.
+
 ## Permisos 
 <img width="807" height="72" alt="image" src="https://github.com/user-attachments/assets/b3d8eaf4-b95a-4cd2-8eb9-6f9007c42c5e" />
 
+Procedemos a ponerle permisos a la ruta especificada 
+
 ## Configuración de fstab
 <img width="567" height="76" alt="image" src="https://github.com/user-attachments/assets/b52d7fcc-89dc-49fe-a6b0-f7b2ae7af496" />
+
+Esta configuracion es importante, el numero de fs porque pertenece a cada equipo su fs y hay que saberlo para que los servers no tebgan error
 
 <img width="806" height="91" alt="image" src="https://github.com/user-attachments/assets/938e1fee-e90f-46ee-aa80-e6259aa66d6e" />
 
@@ -325,11 +335,17 @@ Aquí procedemos a hacer la instalación del paquete nfs-common para luego poder
 ## Sincronicación 
 <img width="811" height="194" alt="image" src="https://github.com/user-attachments/assets/27aa281a-601b-4637-8db5-5274838ce441" />
 
+Esta sincornización es en base al server 4, se pilla la ip privada para que se transfieran de un server a otro todo lo que vaya a necesitar.
+
 ## Comprobacion de las rutas
 <img width="786" height="268" alt="image" src="https://github.com/user-attachments/assets/a729d5d3-8b6f-4cae-a0df-c8c5024f0e35" />
 
+De la misma manera que antes, se comprueba la ruta y ademas como hemos mencionado antes se pilla todo desde S4
+
 ## Comprobacion de las rutas
 <img width="796" height="139" alt="image" src="https://github.com/user-attachments/assets/45cc538b-eb48-4e23-a819-7a961dbecb27" />
+
+Y de la misma manera se hace todo lo mencionado anteriornmente 
 
 ## Apagar Apache
 <img width="810" height="98" alt="image" src="https://github.com/user-attachments/assets/c9dee704-c780-4aa8-922b-da4892a7c67a" />
@@ -337,13 +353,20 @@ Aquí procedemos a hacer la instalación del paquete nfs-common para luego poder
 ## Comprobación
 <img width="326" height="35" alt="image" src="https://github.com/user-attachments/assets/7b0ab0b0-7304-4e62-ad91-19d97749af39" />
 
+Con esta imagen vemos una comprobacion rapida de lo que muestra el local host y todo esta correcto 
+
 ## Touch de extragram
 <img width="586" height="33" alt="image" src="https://github.com/user-attachments/assets/a68ecc4e-c854-446b-96a9-6c294942b0fb" />
 
+Verificar permisos de escritura en el sistema de archivos montado
+Testear conectividad con almacenamiento externo o en red
+Crear marcadores/placeholders para scripts o procesos posteriores
+
 ## Permisos
 <img width="517" height="23" alt="image" src="https://github.com/user-attachments/assets/45d1909b-5aeb-40a9-9568-f60a0f3caeeb" />
+Le aplicamos los permisos necesarios a /var/www
 
 ## Curl 
 <img width="769" height="258" alt="image" src="https://github.com/user-attachments/assets/2cf5c0f8-b82b-4788-b88d-44951211a34a" />
 
-
+Esto sirve para poder comprobar que hemos instalado si el server funciona con nginx o con apache, en nuestro caso funciona con nginx y se porcederia a hacer todo lo mencionado anteriormente 
