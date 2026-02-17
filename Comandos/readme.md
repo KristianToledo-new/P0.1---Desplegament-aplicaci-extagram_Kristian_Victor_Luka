@@ -310,7 +310,64 @@ sudo mount -t nfs4 -o nfsvers=4.1 fs-08248a76210436a73.efs.us-east-1.amazonaws.c
 ## Instalación de servicios del servidor 6.
 Instalacion del ngix y php:
 ```bash
-sudo apt install -y nginx php-fpm php-mysql
+sudo apt update -y
+sudo apt upgrade -y
+```
+ Instalar paquetes necesarios
+ ```bash
+sudo apt install -y \
+nginx \
+apache2 \
+php \
+php-fpm \
+php-mysql \
+php-cli \
+php-curl \
+php-gd \
+php-mbstring \
+php-xml \
+php-zip \
+nfs-common \
+mysql-client \
+rsync \
+unzip
+```
+Crear carpeta del storage
+```bash
+sudo mkdir -p /mnt/extragram-storage
+```
+Montar el EFS
+```bash
+sudo mount -t nfs4 -o nfsvers=4.1 fs-XXXXXXXX.efs.us-east-1.amazonaws.com:/ /mnt/extragram-storage
+df -h
+```
+Dar permisos correctos
+```bash
+sudo chown -R ubuntu:ubuntu /mnt/extragram-storage
+sudo chmod -R 755 /mnt/extragram-storage
+```
+Hacer el montaje permanente
+```bash
+sudo nano /etc/fstab
+```
+```bash
+fs-XXXXXXXX.efs.us-east-1.amazonaws.com:/ /mnt/extragram-storage nfs4 defaults,_netdev 0 0
+```
+Copiar configuración desde S4:
+```bash
+scp -i S2-Extagram.pem S2-Extagram.pem ubuntu@IP_PUBLICA_S6:/home/ubuntu/
+chmod 400 S2-Extagram.pem
+```
+Copiar configuración nginx, apache y web
+```bash
+sudo rsync -avz -e "ssh -i S2-Extagram.pem" ubuntu@IP_PRIVADA_S4:/etc/nginx/ /etc/nginx/
+sudo rsync -avz -e "ssh -i S2-Extagram.pem" ubuntu@IP_PRIVADA_S4:/etc/apache2/ /etc/apache2/
+sudo rsync -avz -e "ssh -i S2-Extagram.pem" ubuntu@IP_PRIVADA_S4:/var/www/ /var/www/
+```
+Apagar Apache (Extagram usa nginx)
+```bash
+sudo systemctl stop apache2
+sudo systemctl disable apache2
 ```
 
 ## Instalación de servicios del servidor 7.
@@ -318,4 +375,32 @@ Instalacion del ngix y php:
 ```bash
 sudo apt install -y nginx php-fpm php-mysql
 ```
-
+Iniciar PHP
+```bash
+sudo systemctl enable php8.3-fpm
+sudo systemctl start php8.3-fpm
+sudo systemctl status php8.3-fpm
+```
+Probar web local
+```bash
+curl localhost
+```
+Probar acceso al storage
+```bash
+touch /mnt/extragram-storage/test.txt
+ls /mnt/extragram-storage
+```
+Verificar red interna
+```bash
+ssh ubuntu@IP_PRIVADA_S6
+```
+Configuración final recomendada
+```bash
+sudo chown -R www-data:www-data /var/www
+```
+Copiar configuración nginx, apache y web
+```bash
+sudo rsync -avz -e "ssh -i S2-Extagram.pem" ubuntu@IP_PRIVADA_S4:/etc/nginx/ /etc/nginx/
+sudo rsync -avz -e "ssh -i S2-Extagram.pem" ubuntu@IP_PRIVADA_S4:/etc/apache2/ /etc/apache2/
+sudo rsync -avz -e "ssh -i S2-Extagram.pem" ubuntu@IP_PRIVADA_S4:/var/www/ /var/www/
+```
