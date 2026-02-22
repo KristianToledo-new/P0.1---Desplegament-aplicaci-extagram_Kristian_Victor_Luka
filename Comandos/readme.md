@@ -291,6 +291,11 @@ echo "Servidor S4 ok" | sudo tee /mnt/extragram-storage/index.html
 ```bash
 curl http://10.0.4.82
 ```
+Crear carpeta uploads:
+```bash
+mkdir /mnt/extragram-storage/uploads
+chmod 777 /mnt/extragram-storage/uploads
+```
 ## Instalación de servicios del servidor 5.
 Instalacion 
 ```bash
