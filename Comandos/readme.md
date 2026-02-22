@@ -266,6 +266,155 @@ sudo touch /mnt/extragram-storage/test.txt
 ```bash
 ls /mnt/extragram-storage/
 ```
+Contenido completo del archivo /mnt/extragram-storage/extagram.php
+```bash
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="/style.css">
+  <title>Extagram</title>
+</head>
+<body>
+
+<form method="POST" enctype="multipart/form-data" action="upload.php">
+  <input type="text" name="post" placeholder="Write something..." required>
+
+  <input id="file" type="file" name="photo"
+    onchange="document.getElementById('preview').src=window.URL.createObjectURL(event.target.files[0])">
+
+  <label for="file">
+    <img id="preview" src="/preview.svg">
+  </label>
+
+  <input type="submit" value="Publish">
+</form>
+
+<?php
+$db = new mysqli("10.0.31.160", "extagram_admin", "pass123", "extagram_db");
+
+if ($db->connect_errno) {
+  echo "<p style='color:red'>DB error: ".$db->connect_error."</p>";
+  exit;
+}
+
+$result = $db->query("SELECT id, post, photourl FROM posts ORDER BY id DESC");
+
+if ($result) {
+  while ($fila = $result->fetch_assoc()) {
+    echo "<div class='post'>";
+
+    echo "<p>" . htmlspecialchars($fila['post']) . "</p>";
+
+    // Importante: usamos /uploads/ (S4 hace proxy a S5)
+    if (!empty($fila['photourl'])) {
+      echo "<img src='/uploads/" . htmlspecialchars($fila['photourl']) . "'>";
+    }
+
+    // Botón eliminar
+    echo "<form method='POST' action='delete.php' onsubmit=\"return confirm('¿Eliminar este post?');\" style='padding: 0 16px 16px 16px;'>";
+    echo "<input type='hidden' name='id' value='" . intval($fila['id']) . "'>";
+    echo "<input type='submit' value='Eliminar'>";
+    echo "</form>";
+
+    echo "</div>";
+  }
+}
+?>
+
+</body>
+</html>
+```
+Contenido completo del archivo /mnt/extragram-storage/upload.php
+```bash
+<?php
+if (!empty($_POST["post"])) {
+
+    $photoid = "";
+
+    // Si hay archivo subido
+    if (!empty($_FILES['photo']['name'])) {
+
+        $ext = strtolower(pathinfo($_FILES['photo']['name'], PATHINFO_EXTENSION));
+
+        // Permitir solo jpg/jpeg/png
+        if ($ext !== "jpg" && $ext !== "jpeg" && $ext !== "png") {
+            die("Solo se permiten archivos JPG, JPEG o PNG");
+        }
+
+        // Nombre con extensión
+        $photoid = uniqid() . "." . $ext;
+
+        // Guardar en uploads (EFS)
+        $dest = __DIR__ . "/uploads/" . $photoid;
+
+        if (!move_uploaded_file($_FILES['photo']['tmp_name'], $dest)) {
+            die("Error moviendo el archivo (permisos/ruta)");
+        }
+    }
+
+    // Conexión MySQL (S7)
+    $db = new mysqli("10.0.31.160", "extagram_admin", "pass123", "extagram_db");
+    if ($db->connect_errno) {
+        die("DB error: " . $db->connect_error);
+    }
+
+    // Insertar post (id es AUTO_INCREMENT)
+    $stmt = $db->prepare("INSERT INTO posts(post, photourl) VALUES(?, ?)");
+    $stmt->bind_param("ss", $_POST["post"], $photoid);
+    $stmt->execute();
+    $stmt->close();
+}
+
+header("Location: /");
+exit;
+?>
+```
+Contenido completo del archivo /mnt/extragram-storage/delete.php:
+```bash
+<?php
+if ($_SERVER["REQUEST_METHOD"] !== "POST") {
+    http_response_code(405);
+    die("Method not allowed");
+}
+
+$id = isset($_POST["id"]) ? intval($_POST["id"]) : 0;
+if ($id <= 0) {
+    http_response_code(400);
+    die("Invalid id");
+}
+
+$db = new mysqli("10.0.31.160", "extagram_admin", "pass123", "extagram_db");
+if ($db->connect_errno) {
+    http_response_code(500);
+    die("DB error: " . $db->connect_error);
+}
+
+// Obtener archivo para borrar
+$stmt = $db->prepare("SELECT photourl FROM posts WHERE id=?");
+$stmt->bind_param("i", $id);
+$stmt->execute();
+$res = $stmt->get_result();
+$row = $res->fetch_assoc();
+$stmt->close();
+
+if ($row && !empty($row["photourl"])) {
+    $file = __DIR__ . "/uploads/" . basename($row["photourl"]);
+    if (is_file($file)) {
+        @unlink($file);
+    }
+}
+
+// Borrar registro
+$stmt = $db->prepare("DELETE FROM posts WHERE id=?");
+$stmt->bind_param("i", $id);
+$stmt->execute();
+$stmt->close();
+
+header("Location: /");
+exit;
+?>
+```
 Contenido completo del archivo /etc/fstab:
 ```bash
 LABEL=cloudimg-rootfs   /           ext4   discard,commit=30,errors=remount-ro   0 1
