@@ -333,6 +333,14 @@ Y lo activamos:
 En el archivo .php colocamos los siguiente:
 <img width="853" height="60" alt="image" src="https://github.com/user-attachments/assets/20c1d7cd-a226-4686-8b29-a45e31452071" />
 
+## Eliminar publicacion
+<img width="699" height="41" alt="image" src="https://github.com/user-attachments/assets/26d0fc99-b187-4907-9744
+-5719c05f948d" />
+
+Contenido:
+<img width="970" height="661" alt="image" src="https://github.com/user-attachments/assets/31472bf6-efcd-4a28-9ae6-518ef6ddfb54" />
+
+
 
 # Creación de S5
 ## Creacion del grupo de seguridad
