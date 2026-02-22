@@ -318,6 +318,16 @@ Hemos reiniciado nginx para aplicar los cambios de configuración.
 
 <img width="596" height="102" alt="image" src="https://github.com/user-attachments/assets/e6499ccb-2764-47fa-bf8f-0af1899eb9ed" />
 
+## Configurar NGINX
+<img width="730" height="43" alt="image" src="https://github.com/user-attachments/assets/f93439c4-9d0c-4459-8a31-368d0df3c171" />
+Colocamos lo siguiente:
+<img width="847" height="614" alt="image" src="https://github.com/user-attachments/assets/5654c926-be0d-4140-ba7e-0019ba5176e2" />
+Y lo activamos:
+<img width="896" height="33" alt="image" src="https://github.com/user-attachments/assets/ec61e47e-9460-4a25-8dec-b31b4ce11868" />
+<img width="700" height="23" alt="image" src="https://github.com/user-attachments/assets/fd9a46e7-7c56-43da-bffc-d55613d3c22b" />
+<img width="490" height="38" alt="image" src="https://github.com/user-attachments/assets/1331db7c-e31e-4f9d-86a9-a56285d5f672" />
+
+
 # Creación de S5
 ## Creacion del grupo de seguridad
 <img width="726" height="674" alt="image" src="https://github.com/user-attachments/assets/11004f89-746f-4fee-9c93-aedfc0ebff3f" />
