@@ -320,12 +320,18 @@ Hemos reiniciado nginx para aplicar los cambios de configuración.
 
 ## Configurar NGINX
 <img width="730" height="43" alt="image" src="https://github.com/user-attachments/assets/f93439c4-9d0c-4459-8a31-368d0df3c171" />
+
 Colocamos lo siguiente:
-<img width="847" height="614" alt="image" src="https://github.com/user-attachments/assets/5654c926-be0d-4140-ba7e-0019ba5176e2" />
+<img width="865" height="630" alt="image" src="https://github.com/user-attachments/assets/475be4b5-06fe-426a-ae66-748a256f34d5" />
+
 Y lo activamos:
 <img width="896" height="33" alt="image" src="https://github.com/user-attachments/assets/ec61e47e-9460-4a25-8dec-b31b4ce11868" />
 <img width="700" height="23" alt="image" src="https://github.com/user-attachments/assets/fd9a46e7-7c56-43da-bffc-d55613d3c22b" />
 <img width="490" height="38" alt="image" src="https://github.com/user-attachments/assets/1331db7c-e31e-4f9d-86a9-a56285d5f672" />
+
+## Configurar conexión MySQL
+En el archivo .php colocamos los siguiente:
+<img width="853" height="60" alt="image" src="https://github.com/user-attachments/assets/20c1d7cd-a226-4686-8b29-a45e31452071" />
 
 
 # Creación de S5
@@ -403,9 +409,9 @@ html/index.nginx-debian.html
 
 Comprobacion final 
 
-<img width="438" height="38" alt="image" src="https://github.com/user-attachments/assets/2a996c72-10bd-4378-a621-04fcb91722e7" />
+<img width="1058" height="510" alt="image" src="https://github.com/user-attachments/assets/d3f4a118-97f6-4062-875a-6afb4040832f" />
+<img width="1001" height="175" alt="image" src="https://github.com/user-attachments/assets/f5d442bc-7c90-42df-b50a-e380f37ec0dd" />
 
-<img width="438" height="38" alt="image" src="https://github.com/user-attachments/assets/ef557e5d-d189-4711-a350-d36b27bec87b" />
 
 
 
