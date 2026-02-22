@@ -398,11 +398,17 @@ html/index.nginx-debian.html
 ## Reiniciar servidor s5
 <img width="589" height="47" alt="image" src="https://github.com/user-attachments/assets/b4b90bfe-d616-4b1d-afe2-06b650f8b5ed" />
 
+## Crear carpeta uploads
+<img width="650" height="47" alt="image" src="https://github.com/user-attachments/assets/cd6266f2-7873-4a93-b478-f82b59793d40" />
+
 Comprobacion final 
 
 <img width="438" height="38" alt="image" src="https://github.com/user-attachments/assets/2a996c72-10bd-4378-a621-04fcb91722e7" />
 
 <img width="438" height="38" alt="image" src="https://github.com/user-attachments/assets/ef557e5d-d189-4711-a350-d36b27bec87b" />
+
+
+
 
 # Creación de S6
 ## Resumen de configuración S6 
